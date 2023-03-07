@@ -2,7 +2,7 @@
 
 _Ce projet est en cours de développement, et je mettrai régulièrement à jour ce README.md avec les avancées du projet._
 
-Ce projet vise à classer les CV en fonction de leur compétence en Data Science. Pour cela, j'ai construis une base de données en scrappant les offres d'emploie Indeed que j'ai valorisé avec GPT-3. En outre, j'ai utilisé l'architecture BERT (bert-base-multilingual-cased) et les Adapters de la librairie `adapter-transformers` pour construire en entraîner mon modèle.
+Ce projet vise à créer un modèle permettant de classer les CV en fonction de leur compétence en Data Science. Pour cela, j'ai construis une base de données en scrappant les offres d'emploie Indeed que j'ai valorisé avec GPT-3. En outre, j'ai utilisé l'architecture BERT (bert-base-multilingual-cased) et les Adapters de la librairie `adapter-transformers` pour construire en entraîner mon modèle.
 
 ## Installation
 
