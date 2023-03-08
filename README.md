@@ -16,8 +16,6 @@ cd fr-resume-explainer
 pip install -r requirements.txt
 ```
 
-Télécharger ensuite [wkhtmltopdf](https://wkhtmltopdf.org/downloads.html)
-
 ## Comment construire votre Dataset ?
 
 ### 1) [Générer une clef API OpenAI](https://platform.openai.com/account/api-keys).
