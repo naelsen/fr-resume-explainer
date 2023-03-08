@@ -15,6 +15,9 @@ from transformers import (
     EarlyStoppingCallback
 )
 
+# On crée le tokenizer à partir de bert-base-multilingual-cased
+tokenizer = BertTokenizer.from_pretrained('bert-base-multilingual-cased')
+
 # Fonction pour encoder les données d'un batch
 def encode_batch(batch):
     return tokenizer(batch["text"], max_length=256, truncation=True, padding="max_length")
@@ -58,9 +61,6 @@ model.add_classification_head(
 # On affiche le nombre de paramètres entraînables
 trainable_prams = sum(p.numel() for p in model.parameters() if p.requires_grad)
 print(f'Nombre de paramètres entraînables : {trainable_prams}')
-
-# On crée le tokenizer à partir de bert-base-multilingual-cased
-tokenizer = BertTokenizer.from_pretrained('bert-base-multilingual-cased')
 
 # On récupère et pré-traite le dataset pour préparer l'entraînement
 dataset = load_from_disk("dataset_100")
