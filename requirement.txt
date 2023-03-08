@@ -6,3 +6,5 @@ torch==1.13.1
 transformers==4.26.1
 adapter-transformers==3.2.0
 pdfminer==20191125
+shap==0.41.0
+matplotlib==3.7.1
