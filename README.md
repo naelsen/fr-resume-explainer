@@ -15,6 +15,7 @@ git clone https://github.com/naelsen/fr-resume-explainer.git
 cd fr-resume-explainer
 pip install -r requirements.txt
 ```
+
 ## Comment construire votre Dataset ?
 
 ### 1) [Générer une clef API OpenAI](https://platform.openai.com/account/api-keys).
