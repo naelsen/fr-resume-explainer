@@ -2,7 +2,7 @@
 
 _Ce projet est en cours de développement, et je mettrai régulièrement à jour ce README.md avec les avancées du projet._
 
-fr-cv-explainer est un dépôt Github permettant de classer les CV français et expliquer pourquoi il est adapté ou pas pour postuler à un poste de Data Scientist. Pour cela, j'ai construit une base de données en utilisant des techniques de Web Scraping. J'ai scrapé de manière responsable les offres d'emploi Indeed, j'ai valorisé ces données. En outre, j'ai utilisé l'architecture BERT (bert-base-multilingual-cased) et les Adapters de la librairie `adapter-transformers` pour construire et entraîner mon modèle. Les prédictions du modèle sont expliquées grâce à l'estimation des valeurs de Shapley.
+`fr-cv-explainer` est un dépôt Github permettant de classer les CV français et expliquer pourquoi il est adapté ou pas pour postuler à un poste de Data Scientist. Pour cela, j'ai construit une base de données en utilisant des techniques de Web Scraping. J'ai scrapé de manière responsable les offres d'emploi Indeed, j'ai valorisé ces données. En outre, j'ai utilisé l'architecture BERT (bert-base-multilingual-cased) et les Adapters de la librairie `adapter-transformers` pour construire et entraîner mon modèle. Les prédictions du modèle sont expliquées grâce à l'estimation des valeurs de Shapley.
 
 ## Installation
 
