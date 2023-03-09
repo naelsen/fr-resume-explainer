@@ -27,7 +27,7 @@ def convert_pdf_to_text(file_path):
             
     # On récupère le texte converti
     text = output_string.getvalue()
-    text = ' '.join(re.findall("(?:(?:https?|ftp):\/\/)?[\w/\-?=%.]+\.[\w/\-&?=%.]+|[\w']+", text))
+    text = ' '.join(re.findall("\w[\w\.]*@\w+\.\w+|(?:(?:https?|ftp):\/\/)?[\w/\-?=%.]+\.[\w/\-&?=%.]+|[\w']+", text))
 
     # On ferme le tampon de sortie
     output_string.close()

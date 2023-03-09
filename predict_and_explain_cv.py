@@ -56,9 +56,9 @@ model.to(device)
 classifier = TextClassificationPipeline(model=model, tokenizer=tokenizer, device=device)
 
 # Définition de la longueur maximale d'un segment de texte (en nombre de tokens)
-max_length = 252
+max_length = 256
 # Définition du chevauchement entre deux segments de texte (en nombre de tokens)
-stride = 4
+stride = 0
 # Calcul de la longueur maximale d'un segment de texte moins la taille du chevauchement
 max_length_minus_stride = (max_length - stride)
 
@@ -76,13 +76,13 @@ while len(input_ids) > 0:
 # Traitement des segments, on maximise la taille du dernier segment, puis celle du permier afin d'avoir
 # le plus d'information pertinente dans ces segments (car il y a plus d'info pertinente en milieu de CV)    
 if len(segments) == 2:
-    segments = [re.sub("#","",segments[0] + segments[1])]
+    segments = [segments[0] + segments[1]]
 elif len(segments) == 3:
-    segments = [segments[0], re.sub("#","",segments[1] + segments[2])]
+    segments = [segments[0], segments[1] + segments[2]]
 elif len(segments) == 4:
-    segments = [re.sub("#", "", segments[0] + segments[1]), re.sub("#", "", segments[2] + segments[3])]
+    segments = [segments[0] + segments[1], segments[2] + segments[3]]
 else:
-    segments = [re.sub("#", "", segments[0] + segments[1])] + segments[2:-2] + [re.sub("#", "", segments[-2] + segments[-1])]
+    segments = [segments[0] + segments[1]] + segments[2:-2] + [segments[-2] + segments[-1]]
 
 # Classification du CV
 print("\nClassification :\n")
@@ -90,8 +90,8 @@ print(args.cv_name + " : {}".format(make_predictions(classifier, segments)))
 
 # Explication de la classification
 explainer = shap.Explainer(classifier)
-for i, txt in enumerate(segments):
-    shap_values = explainer([txt])
-    fig = shap.plots.text(shap_values, num_starting_labels=1, display=False)
-    with open('shap_values_part_{}.html'.format(i),'w') as f:
+for i, segment in enumerate(segments):
+    shap_values = explainer([segment])
+    fig = shap.plots.text(shap_values, num_starting_labels=0, display=False)
+    with open(f'{args.cv_name[:-4]}_segment_{i}.html','w') as f:
         f.write(fig)
