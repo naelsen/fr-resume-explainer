@@ -16,6 +16,12 @@ cd fr-resume-explainer
 pip install -r requirements.txt
 ```
 
+## Comment analyser votre CV ?
+
+```
+python3 predict_and_explain_cv.py <YOUR_CV_FILE.pdf>
+```
+
 ## Comment construire votre Dataset ?
 
 ### 1) [Générer une clef API OpenAI](https://platform.openai.com/account/api-keys).
@@ -62,4 +68,4 @@ Pour interpréter les prédictions du modèle, je vais utiliser la méthode d'é
 
 Voici un exemple sur mon CV :
 
-![Exemple]()
+![Exemple](https://raw.githubusercontent.com/naelsen/fr-resume-explainer/main/merge_result_shap.png)
