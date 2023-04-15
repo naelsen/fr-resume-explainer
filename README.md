@@ -66,4 +66,4 @@ Pour interpréter les prédictions du modèle, je vais utiliser la méthode d'é
 
 Voici un exemple sur mon CV :
 
-![Exemple](https://raw.githubusercontent.com/naelsen/fr-resume-explainer/main/merge_result_shap.png)
+![Exemple](https://raw.githubusercontent.com/naelsen/fr-resume-explainer/main/CV_Nael_Sennoun_vf_ananlyses.pdf)
