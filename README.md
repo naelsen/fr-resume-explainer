@@ -63,7 +63,3 @@ Le modèle a été entaîné pour minimiser la fonction d'entropie croisée de l
 ## Interprétation des résultats
 
 Pour interpréter les prédictions du modèle, je vais utiliser la méthode d'éstimation des valeurs de shapley. Cette méthode se base sur la théorie des jeux pour estimer l'importance de chaque feature pour chaque prédiction du modèle. Les valeurs de shapley permettent ainsi d'expliquer les décisions prises par le modèle et d'identifier les features les plus importantes pour la tâche de classification.
-
-Voici un exemple sur mon CV :
-
-![Exemple](https://raw.githubusercontent.com/naelsen/fr-resume-explainer/main/CV_Nael_Sennoun_vf_analyses.png)
